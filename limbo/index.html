@@ -8,8 +8,21 @@
   </head>
   <body>
     <center>
-      <h1>To unsubscribe from the mailing list please select correct key</h1>
+      <h1 id="text">
+        To unsubscribe from the mailing list please select correct key
+      </h1>
     </center>
+
+    <script defer>
+      const params = new URLSearchParams(window.location.search);
+      let domTextElement = document.getElementById("text");
+      if (params.get("text")) {
+        domTextElement.innerText = params.get("text");
+      } else if (params.get("t")) {
+        domTextElement.innerText = params.get("t");
+      }
+    </script>
+
     <div id="container">
       <img id="key0" class="key" src="key.png" onClick="tryKey(0)" />
       <img id="key1" class="key" src="key.png" onClick="tryKey(1)" />

@@ -95,8 +95,9 @@ function toggleShowCorrectKey() {
   element.classList.toggle("correct");
 }
 
-let correctKey = getRandomInt(0, 7);
+let correctKey;
 function init() {
+  correctKey = getRandomInt(0, 8);
   mapPixels();
   setKeyPositions();
   toggleShowCorrectKey();
@@ -106,13 +107,13 @@ function start() {
   song.play();
   setTimeout(() => {
     setInterval(mainLoop, 300);
-  }, 500);
+  }, 750);
 }
 function mainLoop() {
   if (song.currentTime < 191) {
     timeStep++;
     if (timeStep > 11) {
-      timeStep = getRandomInt(0, 11);
+      timeStep = getRandomInt(0, 12);
     }
     setKeyPositions();
   } else {
