@@ -145,6 +145,14 @@ function toggleHideExtra() {
     element.classList.toggle("hide");
   }
 }
+function toggleHideExtraSpicy() {
+  for (let i = 8; i < 18; i++) {
+    setTimeout(() => {
+      let element = document.getElementById(`key${i}`);
+      element.classList.toggle("hide");
+    }, i * 300);
+  }
+}
 
 function toggleShowCorrectKey() {
   let element = document.getElementById(`key${correctKey}`);
@@ -185,10 +193,10 @@ function toggleKeySpin() {
 
 function start() {
   song.play();
-  toggleHideExtra();
   toggleShowCorrectKey();
   setInterval(mainLoop, 400);
   toggleKeySpinSpicy();
+  toggleHideExtraSpicy();
   setTimeout(toggleKeySpin, 15.3 * 1000);
 }
 function mainLoop() {
