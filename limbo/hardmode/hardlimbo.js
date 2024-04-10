@@ -5,7 +5,7 @@ function getRandomInt(min, max) {
 }
 
 const song = new Audio("./limbo.mp3");
-song.currentTime = 169;
+// song.currentTime = 169;
 
 let mapToScreenPixels = {};
 
@@ -84,7 +84,6 @@ function getKeyPosition(keyId) {
   let found = false;
   if (keyGrid[seed] == null) {
     keyGrid[seed] = keyId;
-    console.log(`Claim ${seed}`);
     found = true;
   }
 
@@ -93,7 +92,6 @@ function getKeyPosition(keyId) {
     if (seed > 17) seed = 0;
     if (keyGrid[seed] == null) {
       keyGrid[seed] = keyId;
-      console.log(`Claim ${seed}`);
       found = true;
       break;
     }
@@ -169,23 +167,42 @@ function init() {
   setInitialKeyPositions();
 }
 
+function toggleKeySpinSpicy() {
+  for (let i = 0; i < 18; i++) {
+    setTimeout(() => {
+      let element = document.getElementById(`key${i}`);
+      element.classList.toggle("spin");
+    }, i * 300);
+  }
+}
+
+function toggleKeySpin() {
+  for (let i = 0; i < 18; i++) {
+    let element = document.getElementById(`key${i}`);
+    element.classList.toggle("spin");
+  }
+}
+
 function start() {
   song.play();
   toggleHideExtra();
   toggleShowCorrectKey();
   setInterval(mainLoop, 400);
+  toggleKeySpinSpicy();
+  setTimeout(toggleKeySpin, 15.3 * 1000);
 }
 function mainLoop() {
-  if (song.currentTime < 171.5) return;
-  if (song.currentTime < 191) {
+  if (song.currentTime < 5) return;
+  if (song.currentTime < 15) {
     setKeyPositions();
   } else {
     toggleColors();
   }
+  console.log(song.currentTime);
 }
 let hasGuessed = false;
 function tryKey(n) {
-  if (song.currentTime > 191 && !hasGuessed) {
+  if (song.currentTime > 15 && !hasGuessed) {
     hasGuessed = true;
     if (correctKey == n) {
       alert("Correct key!");

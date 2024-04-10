@@ -52,6 +52,22 @@
       user-select: none; /* Standard syntax */
     }
 
+    .key.spin {
+      animation: spin 300ms infinite ease-in-out;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     .key.showcolor {
       background-color: rgba(0, 213, 255, 0.195);
     }
