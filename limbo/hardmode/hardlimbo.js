@@ -185,7 +185,7 @@ function mainLoop() {
 }
 let hasGuessed = false;
 function tryKey(n) {
-  if (timeStep == -1 && !hasGuessed) {
+  if (song.currentTime > 191 && !hasGuessed) {
     hasGuessed = true;
     if (correctKey == n) {
       alert("Correct key!");
