@@ -4,7 +4,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 }
 
-const song = new Audio("./limbo.mp3");
+const song = new Audio("./troll_limbo.mp3");
 // song.currentTime = 169;
 
 let mapToScreenPixels = {};
