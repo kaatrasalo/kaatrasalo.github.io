@@ -58,10 +58,6 @@ function mapPixels() {
     6: { x: horizontalDivisions[4], y: verticalDivisions[4] },
     7: { x: horizontalDivisions[5], y: verticalDivisions[4] },
   };
-  //   for (let i = 0; i < 4; i++) {
-  //     mapToScreenPixels[i + 4] = { x: (x / 4) * i, y: (y / 4) * 2 };
-  //   }
-
   console.log(mapToScreenPixels);
 }
 
@@ -113,7 +109,7 @@ function mainLoop() {
   if (song.currentTime < 191) {
     timeStep++;
     if (timeStep > 11) {
-      timeStep = getRandomInt(0, 12);
+      timeStep = getRandomInt(0, 11);
     }
     setKeyPositions();
   } else {
@@ -130,6 +126,10 @@ function tryKey(n) {
     hasGuessed = true;
     if (correctKey == n) {
       alert("Correct key!");
+      if (confirm("Wish to test your luck?")) {
+        window.location.href =
+          "https://nuclidek.github.io/limbo/hardmode?text=Now do it again";
+      }
     } else {
       alert("You suck.");
     }
