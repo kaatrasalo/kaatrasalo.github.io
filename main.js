@@ -13,9 +13,19 @@ function calculateAge() {
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
+let waiter = 0;
 function init() {
-  preclickDom.classList.remove("hidden");
+  preclickDom.classList.add("hidden");
   postclickDom.classList.add("hidden");
+
+  waiter = setInterval(() => {
+    if (video.readyState == 4 && song.readyState == 4) {
+      clearInterval(waiter);
+      waiter = null;
+      preclickDom.classList.remove("hidden");
+      console.log("Everything ready!");
+    }
+  }, 10);
 }
 async function wait(ms) {
   return new Promise((resolve) => {
@@ -24,6 +34,7 @@ async function wait(ms) {
 }
 async function main() {
   if (playing) return;
+  if (waiter) return;
   playing = true;
   preclickDom.classList.add("hidden");
   song.currentTime = 21.7;
