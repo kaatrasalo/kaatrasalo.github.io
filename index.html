@@ -4,18 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@NuclideK</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+    <script defer src="translate.js"></script>
   </head>
   <body>
-    <p>@NuclideK</p>
-    <a href="https://nuclide.carrd.co">Carrd.co</a>
-    <br />
-    <a href="https://github.com/NuclideK/">Github</a>
-    <br />
-    <a href="./limbo/">"Mailing list"</a>
-    <br />
-    <a href="./mfwheel/">MfWheel</a>
-    <script>
-      console.log("Insert insane amount of google tracking here");
-    </script>
+    <div id="container" onclick="main()">
+      <div id="pre-click">
+        <p class="trans">[functionality.clicktoenter]</p>
+      </div>
+      <div id="post-click">
+        <div id="intro">
+          <h1>Nuclide</h1>
+          <p class="trans">[intro.aka] Taro [intro.or] SuurX</p>
+        </div>
+        <div id="description">
+          <p class="trans">[age.text]</p>
+          <p class="trans">
+            [pronouns.text] [pronouns.primary]/[pronouns.secondary]
+          </p>
+        </div>
+        <div id="social-links-container">
+          <p class="trans">[socials.primarytext]</p>
+          <div id="social-links">
+            <a
+              class="trans"
+              href="https://discordapp.com/users/541652140687360010"
+              >[socials.discord]</a
+            >
+            <a
+              class="trans"
+              href="https://discordapp.com/users/541652140687360010"
+              >[socials.github]</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <video muted loop id="videobg">
+      <source
+        src="https://r2.guns.lol/b919652d-985e-4ae3-9f9f-27c8e5c1a56f.mp4"
+        type="video/mp4"
+      />
+    </video>
   </body>
 </html>
