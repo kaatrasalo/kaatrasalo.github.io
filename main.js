@@ -40,6 +40,7 @@ async function main() {
   song.currentTime = 21.7;
   video.currentTime = 20.8;
   song.volume = 0.1;
+  song.loop = true;
   song.play();
   video.play();
   await wait(2000);

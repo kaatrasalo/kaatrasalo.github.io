@@ -33,7 +33,7 @@ body {
 #post-click {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   height: 500px;
   width: 1000px;
   border-radius: 10px;
@@ -41,9 +41,6 @@ body {
   flex-direction: column;
   align-items: center;
   transition-duration: 1s;
-}
-#post-click a {
-  color: #00546e;
 }
 
 #post-click p {
@@ -61,13 +58,16 @@ body {
   margin-bottom: 50px;
 }
 #intro h1 {
-  color: rgba(255, 255, 255, 1);
+  color: #6900ff;
   font-family: "Changa", sans-serif;
   font-weight: 200;
   font-size: 5em;
   margin-top: -10px;
   margin-bottom: -50px;
   padding: 0px;
+}
+#intro p {
+  color: rgb(150, 0, 100);
 }
 
 #description {
@@ -87,6 +87,7 @@ body {
 #social-links-container {
   margin-top: 50ppx;
 }
+
 #social-links a {
   color: rgba(255, 255, 255, 1);
   font-family: "Changa", sans-serif;
@@ -94,6 +95,9 @@ body {
   font-size: 1.5em;
 }
 
+#post-click.hidden {
+  transition-duration: 1ms;
+}
 .hidden {
   opacity: 0%;
   transition-delay: 1ms;
