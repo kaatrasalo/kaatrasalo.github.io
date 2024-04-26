@@ -22,9 +22,11 @@ const translatable_content = {
   age: {
     EN: {
       text: `I'm a ${calculateAge()}y old from Finland`,
+      age: `${calculateAge()}`,
     },
     FI: {
       text: `Olen ${calculateAge()} vuotias suomalainen`,
+      age: `${calculateAge()}`,
     },
   },
   pronouns: {

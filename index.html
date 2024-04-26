@@ -7,43 +7,43 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
     <script defer src="translate.js"></script>
+    <script defer type="module" src="audiovisualizer.js"></script>
   </head>
   <body>
+    <audio loop src="ALEPH.mp3" id="song"></audio>
     <div id="container" onclick="main()">
       <div id="pre-click">
         <p class="trans">[functionality.clicktoenter]</p>
       </div>
       <div id="post-click">
         <div id="intro">
+          <img id="logo" src="Nuclide.png" />
           <h1>Nuclide</h1>
-          <p class="trans">[intro.aka] Taro [intro.or] SuurX</p>
-        </div>
-        <div id="description">
-          <p class="trans">[age.text]</p>
           <p class="trans">
-            [pronouns.text] [pronouns.primary]/[pronouns.secondary]
+            [age.age] - [pronouns.primary]/[pronouns.secondary]
           </p>
         </div>
+        <div id="description">
+          <p>Your favourite phoenix businessman</p>
+          <p>Currently the QA Lead for Lights Out</p>
+        </div>
         <div id="social-links-container">
-          <p class="trans">[socials.primarytext]</p>
           <div id="social-links">
-            <a
-              class="trans"
-              href="https://discordapp.com/users/541652140687360010"
-              >[socials.discord]</a
+            <a href="https://discordapp.com/users/541652140687360010"
+              >Discord</a
             >
-            <a class="trans" href="https://github.com/NuclideK/"
-              >[socials.github]</a
-            >
+            <a href="https://github.com/NuclideK/">Github</a>
+            <a href="/credits">Credits</a>
           </div>
         </div>
       </div>
     </div>
-    <video muted loop id="videobg">
+    <div id="bg"></div>
+    <!-- <video muted loop id="bg">
       <source
-        src="https://r2.guns.lol/b919652d-985e-4ae3-9f9f-27c8e5c1a56f.mp4"
+        src=""
         type="video/mp4"
       />
-    </video>
+    </video> -->
   </body>
 </html>

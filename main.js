@@ -1,8 +1,5 @@
 let playing = false;
-const song = new Audio(
-  `https://r2.guns.lol/d94c745f-7191-4858-be9b-a5477bae2474.mp3`
-);
-const video = document.getElementById("videobg");
+const song = document.getElementById("song");
 
 const preclickDom = document.getElementById("pre-click");
 const postclickDom = document.getElementById("post-click");
@@ -19,7 +16,7 @@ function init() {
   postclickDom.classList.add("hidden");
 
   waiter = setInterval(() => {
-    if (video.readyState == 4 && song.readyState == 4) {
+    if (song.readyState == 4) {
       clearInterval(waiter);
       waiter = null;
       preclickDom.classList.remove("hidden");
@@ -37,13 +34,10 @@ async function main() {
   if (waiter) return;
   playing = true;
   preclickDom.classList.add("hidden");
-  song.currentTime = 21.7;
-  video.currentTime = 20.8;
-  song.volume = 0.1;
+  song.currentTime = 0;
+  song.volume = 0.15;
   song.loop = true;
   song.play();
-  video.play();
-  await wait(2000);
   postclickDom.classList.remove("hidden");
 }
 

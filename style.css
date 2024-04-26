@@ -7,13 +7,14 @@ body {
   margin: 0;
 }
 
-#videobg {
+#bg {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+  background-color: #090909;
 }
 
 #container {
@@ -33,7 +34,7 @@ body {
 #post-click {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
   height: 500px;
   width: 1000px;
   border-radius: 10px;
@@ -44,7 +45,7 @@ body {
 }
 
 #post-click p {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(100, 49, 10);
   font-family: "Changa", sans-serif;
   font-weight: 200;
   font-size: 2em;
@@ -56,18 +57,24 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+#intro #logo {
+  height: 128px;
 }
 #intro h1 {
-  color: #6900ff;
+  color: #c77335;
   font-family: "Changa", sans-serif;
   font-weight: 200;
-  font-size: 5em;
+  font-size: 2em;
   margin-top: -10px;
-  margin-bottom: -50px;
+  margin-bottom: -25px;
   padding: 0px;
 }
 #intro p {
-  color: rgb(150, 0, 100);
+  font-size: 1.2em;
+  color: rgb(120, 69, 30);
 }
 
 #description {
@@ -82,14 +89,15 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 #social-links-container {
-  margin-top: 50ppx;
+  width: 40%;
 }
 
 #social-links a {
-  color: rgba(255, 255, 255, 1);
+  color: rgb(116, 66, 30);
   font-family: "Changa", sans-serif;
   font-weight: 200;
   font-size: 1.5em;
