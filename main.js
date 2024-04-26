@@ -4,6 +4,9 @@ const song = document.getElementById("song");
 const preclickDom = document.getElementById("pre-click");
 const postclickDom = document.getElementById("post-click");
 
+const description = document.getElementById("description");
+const credits = document.getElementById("credits");
+
 function calculateAge() {
   var ageDifMs = Date.now() - new Date("Mon, 06 Mar 2006 00:00:00 +0200");
   var ageDate = new Date(ageDifMs);
@@ -14,6 +17,8 @@ let waiter = 0;
 function init() {
   preclickDom.classList.add("hidden");
   postclickDom.classList.add("hidden");
+  credits.classList.add("hidden");
+  credits.classList.add("gone");
 
   waiter = setInterval(() => {
     if (song.readyState == 4) {
@@ -40,5 +45,10 @@ async function main() {
   song.play();
   postclickDom.classList.remove("hidden");
 }
-
+async function togglecredits() {
+  description.classList.toggle("hidden");
+  description.classList.toggle("gone");
+  credits.classList.toggle("gone");
+  credits.classList.toggle("hidden");
+}
 init();

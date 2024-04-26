@@ -16,6 +16,7 @@ const audioMotion = new AudioMotionAnalyzer(document.getElementById("bg"), {
 });
 
 audioMotion.registerGradient("phoenix", {
+  bgColor: "#090909",
   colorStops: ["#c77335"],
 });
 
