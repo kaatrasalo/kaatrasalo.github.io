@@ -5,20 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@nuclide</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/lib/flipdown.css" />
-    <script src="lib/flipdown.js"></script>
     <script defer src="main.js"></script>
+    <script defer src="translate.js"></script>
+    <script defer type="module" src="audiovisualizer.js"></script>
   </head>
   <body>
-    <audio loop src="sky.mp3" id="song"></audio>
+    <audio loop src="ALEPH.mp3" id="song"></audio>
     <div id="container" onclick="main()">
       <div id="pre-click">
-        <p>click</p>
+        <p class="trans">[functionality.clicktoenter]</p>
       </div>
       <div id="post-click">
-        <div id="flipdown" class="flipdown"></div>
+        <div id="intro">
+          <img id="logo" src="Nuclide.png" />
+          <h1>Nuclide</h1>
+          <p class="trans">
+            [age.age] - [pronouns.primary]/[pronouns.secondary]
+          </p>
+        </div>
+        <div id="description">
+          <p>Your favourite phoenix businessman</p>
+          <p>Currently the QA Lead for Lights Out</p>
+        </div>
+        <div id="credits">
+          <p>
+            Profile picture by
+            <a href="https://www.instagram.com/ella_richii/">@ella_richii</a>
+          </p>
+          <p><br /></p>
+        </div>
+        <div id="social-links-container">
+          <div id="social-links">
+            <a href="https://discordapp.com/users/541652140687360010"
+              >Discord</a
+            >
+            <a href="https://github.com/NuclideK/">Github</a>
+            <a href="#" onclick="togglecredits() ">Credits</a>
+          </div>
+        </div>
       </div>
     </div>
     <div id="bg"></div>
+    <!-- <video muted loop id="bg">
+      <source
+        src=""
+        type="video/mp4"
+      />
+    </video> -->
   </body>
 </html>
