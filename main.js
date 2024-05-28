@@ -40,7 +40,7 @@ async function main() {
   playing = true;
   preclickDom.classList.add("hidden");
   song.currentTime = 19;
-  song.volume = 0.15;
+  song.volume = 0.2;
   song.loop = true;
   song.play();
   postclickDom.classList.remove("hidden");
@@ -131,7 +131,7 @@ async function emoHandler() {
   }
   if (song.currentTime >= 68.5 && emoStage == 10) {
     emoStage = 11;
-    song.volume = 0.2;
+    song.volume = 0.3;
     audioMotion.setOptions({
       gradient: "blood",
       lumiBars: true,
@@ -147,7 +147,3 @@ async function togglecredits() {
   credits.classList.toggle("hidden");
 }
 init();
-
-document.onclick = () => {
-  console.log(song.currentTime);
-};
