@@ -8,16 +8,16 @@ const audioMotion = new AudioMotionAnalyzer(document.getElementById("bg"), {
   showScaleX: false,
   lumiBars: false,
   radial: true,
-  mode: 7,
+  mode: 5,
   frequencyScale: "log",
-  maxFreq: 5000,
+  maxFreq: 4000,
   channelLayout: "single",
-  smoothing: 0.1,
+  smoothing: 0.2,
   bgAlpha: 1,
   overlay: true,
   showPeaks: false,
   roundBars: true,
-  mirror: -1,
+  mirror: 1,
   radius: 0.6,
 });
 
@@ -72,10 +72,10 @@ function resizeFunny() {
         audioMotion.setOptions({
           width: width,
         });
-      }, 250);
-    }, 250);
+      }, 25);
+    }, 25);
     deferring = null;
-  }, 1000);
+  }, 500);
 }
 
 window.onresize = () => {

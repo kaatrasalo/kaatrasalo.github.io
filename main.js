@@ -36,11 +36,13 @@ async function main() {
   if (playing) return;
   if (waiter) return;
   playing = true;
-  preclickDom.classList.add("hidden");
   song.currentTime = 0;
-  song.volume = 0.2;
+  song.volume = 0.25;
   song.loop = true;
   song.play();
-  postclickDom.classList.remove("hidden");
+  preclickDom.classList.add("hidden");
+  setTimeout(() => {
+    postclickDom.classList.remove("hidden");
+  }, 10 * 1000);
 }
 init();
