@@ -37,7 +37,7 @@ async function main() {
   if (waiter) return;
   playing = true;
   song.currentTime = 0;
-  song.volume = 0.25;
+  song.volume = 0.4;
   song.loop = true;
   song.play();
   preclickDom.classList.add("hidden");

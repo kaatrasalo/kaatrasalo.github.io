@@ -27,7 +27,7 @@ audioMotion.registerGradient("phoenix", {
 });
 audioMotion.registerGradient("emo", {
   bgColor: "#090909",
-  colorStops: ["#6900FF", "#FFFFFF", "#FFFFFF"],
+  colorStops: ["#FFFFFF"],
 });
 audioMotion.registerGradient("blood", {
   bgColor: "#090909",
@@ -60,7 +60,6 @@ function resizeFunny() {
   }
 
   deferring = setTimeout(() => {
-    console.log("fixing size");
     height = window.screen.height;
     width = window.screen.width;
     audioMotion.setOptions({
