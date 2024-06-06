@@ -67,6 +67,14 @@ function resizeFunny() {
     audioMotion.setOptions({
       width: width,
     });
+    setTimeout(() => {
+      document.querySelector("#bg > canvas").height = 0;
+      setTimeout(() => {
+        audioMotion.setOptions({
+          width: width,
+        });
+      }, 250);
+    }, 250);
     deferring = null;
   }, 1000);
 }
