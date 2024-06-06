@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
 
 html,
 body {
   height: 100%;
   margin: 0;
+  font-size: 16px;
 }
 
-a {
-  color: rgb(116, 66, 30);
-  font-family: "Changa", sans-serif;
-  font-weight: 200;
+* {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #bg {
@@ -21,9 +23,13 @@ a {
   min-height: 100%;
   z-index: -1;
   background-color: #090909;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #container {
+  min-width: 100%;
   min-height: 100%;
   display: flex;
   justify-content: center;
@@ -32,94 +38,33 @@ a {
 
 #pre-click {
   position: fixed;
-  font-size: 50px;
-  color: aliceblue;
-  font-family: "Rubik", sans-serif;
+  font-size: 3em;
+  color: #770000;
+  font-size: 5em;
+  font-family: "Zeyada", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
 }
 
 #post-click {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(15px);
-  height: 500px;
-  width: 1000px;
-  border-radius: 10px;
   display: flex;
+  height: min(40vw, 40vh); /* Minimum of 20% of viewport width or height */
+  width: min(40vw, 40vh); /* Minimum of 20% of viewport width or height */
+  border-radius: 50%;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  transition-duration: 1s;
+  transition: 5s 1s;
 }
 
-#post-click p {
-  color: rgb(100, 49, 10);
-  font-family: "Changa", sans-serif;
-  font-weight: 200;
-  font-size: 2em;
-  margin: 0px;
+#post-click img {
+  height: 80%;
+  width: auto;
+  filter: grayscale(100%);
 }
 
-#intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
-#intro #logo {
-  height: 128px;
-}
-#intro h1 {
-  color: #c77335;
-  font-family: "Changa", sans-serif;
-  font-weight: 200;
-  font-size: 2em;
-  margin-top: -10px;
-  margin-bottom: -25px;
-  padding: 0px;
-}
-#intro p {
-  font-size: 1.2em;
-  color: rgb(120, 69, 30);
-}
-
-#description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#social-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 50px;
-}
-
-#social-links-container {
-  width: 40%;
-}
-
-#social-links a {
-  color: rgb(116, 66, 30);
-  font-family: "Changa", sans-serif;
-  font-weight: 200;
-  font-size: 1.5em;
-}
-
-#post-click.hidden {
-  transition-duration: 1ms;
-}
 .hidden {
-  opacity: 0%;
-  transition-delay: 1ms;
-  transition-duration: 1ms;
-}
-.gone {
-  display: none;
-}
-.gone * {
-  display: none;
+  opacity: 0;
 }

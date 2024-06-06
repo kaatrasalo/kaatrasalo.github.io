@@ -10,45 +10,15 @@
     <script defer type="module" src="audiovisualizer.js"></script>
   </head>
   <body>
-    <audio loop src="ticking.mp3" id="song"></audio>
+    <audio loop src="husk.mp3" id="song"></audio>
     <div id="container" onclick="main()">
       <div id="pre-click">
         <p class="trans">[functionality.clicktoenter]</p>
       </div>
-      <div id="post-click">
-        <div id="intro">
-          <img id="logo" src="Nuclide.png" />
-          <h1>Nuclide</h1>
-          <p class="trans">
-            [age.age] - [pronouns.primary]/[pronouns.secondary]
-          </p>
-        </div>
-        <div id="description">
-          <p>Your favourite phoenix businessman</p>
-          <p>Currently the QA Lead for Lights Out</p>
-        </div>
-        <div id="credits">
-          <p>
-            Profile picture by
-            <a href="#">@ella_richii</a>
-          </p>
-          <p><br /></p>
-        </div>
-        <div id="social-links-container">
-          <div id="social-links">
-            <a href="#">Discord</a>
-            <a href="#">Github</a>
-            <a href="#">Credits</a>
-          </div>
-        </div>
+      <div id="post-click" class="hidden">
+        <img src="Nuclide.png" />
       </div>
     </div>
     <div id="bg"></div>
-    <!-- <video muted loop id="bg">
-      <source
-        src=""
-        type="video/mp4"
-      />
-    </video> -->
   </body>
 </html>

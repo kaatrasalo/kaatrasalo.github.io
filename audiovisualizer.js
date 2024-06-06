@@ -3,20 +3,23 @@ let height = window.screen.height;
 let width = window.screen.width;
 const audioMotion = new AudioMotionAnalyzer(document.getElementById("bg"), {
   source: document.getElementById("song"),
-  height: height,
-  colorMode: "bar-level",
-  roundBars: false,
+  width: width,
+  colorMode: "gradient",
   showScaleX: false,
   lumiBars: false,
+  radial: true,
   mode: 1,
   frequencyScale: "log",
+  maxFreq: 4500,
   channelLayout: "single",
   smoothing: 0,
-  showPeaks: false,
   bgAlpha: 1,
   overlay: true,
+  showPeaks: false,
+  roundBars: true,
+  mirror: 1,
+  radius: 0.6,
 });
-window.audioMotion = audioMotion;
 
 audioMotion.registerGradient("phoenix", {
   bgColor: "#090909",
@@ -44,5 +47,30 @@ audioMotion.registerGradient("blood", {
 });
 
 audioMotion.setOptions({
-  gradient: "phoenix",
+  gradient: "emo",
+  smoothing: 0.9,
 });
+
+window.audioMotion = audioMotion;
+
+let deferring = null;
+
+function resizeFunny() {
+  if (deferring) {
+    clearTimeout(deferring);
+  }
+
+  deferring = setTimeout(() => {
+    console.log("fixing size");
+    height = window.screen.height;
+    width = window.screen.width;
+    audioMotion.setOptions({
+      width: width,
+    });
+    deferring = null;
+  }, 1000);
+}
+
+window.onresize = () => {
+  resizeFunny();
+};
