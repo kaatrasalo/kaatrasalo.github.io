@@ -8,16 +8,16 @@ const audioMotion = new AudioMotionAnalyzer(document.getElementById("bg"), {
   showScaleX: false,
   lumiBars: false,
   radial: true,
-  mode: 1,
+  mode: 7,
   frequencyScale: "log",
-  maxFreq: 4500,
+  maxFreq: 5000,
   channelLayout: "single",
-  smoothing: 0,
+  smoothing: 0.1,
   bgAlpha: 1,
   overlay: true,
   showPeaks: false,
   roundBars: true,
-  mirror: 1,
+  mirror: -1,
   radius: 0.6,
 });
 
@@ -48,7 +48,6 @@ audioMotion.registerGradient("blood", {
 
 audioMotion.setOptions({
   gradient: "emo",
-  smoothing: 0.9,
 });
 
 window.audioMotion = audioMotion;
