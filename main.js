@@ -23,7 +23,8 @@ function init() {
       clearInterval(waiter);
       waiter = null;
       preclickDom.classList.remove("hidden");
-      console.log("Everything ready!");
+    } else {
+      console.log("waiting...", song.readyState);
     }
   }, 10);
 }
