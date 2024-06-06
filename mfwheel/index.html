@@ -1,6 +1,21 @@
-<p>End of an era.</p>
-<script>
-  setTimeout(() => {
-    window.location.replace("https://nuclidek.github.io/");
-  }, 10 * 1000);
+<h1>I'm done.</h1>
+<p>
+  Below you will find a copy of your data, make a copy of it before this site
+  goes down
+</p>
+<pre id="data"></pre>
+<script defer>
+  let saveData = localStorage.getItem("save");
+  document.getElementById("data").innerText = JSON.stringify(
+    JSON.parse(saveData),
+    null,
+    4
+  );
 </script>
+
+<style>
+  pre {
+    color: #000000;
+    font-size: xx-small;
+  }
+</style>
