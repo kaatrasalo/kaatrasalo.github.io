@@ -28,10 +28,6 @@ body {
   align-items: center;
 }
 
-#bg canvas {
-  filter: blur(3px);
-}
-
 #container {
   min-width: 100%;
   min-height: 100%;
@@ -52,7 +48,7 @@ body {
 }
 
 #pre-click.hidden {
-  transition: 15s;
+  transition: 10s;
   filter: blur(15px);
 }
 

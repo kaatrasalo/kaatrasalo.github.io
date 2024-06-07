@@ -44,6 +44,6 @@ async function main() {
   preclickDom.classList.add("hidden");
   setTimeout(() => {
     postclickDom.classList.remove("hidden");
-  }, 10 * 1000);
+  }, 4 * 1000);
 }
 init();
